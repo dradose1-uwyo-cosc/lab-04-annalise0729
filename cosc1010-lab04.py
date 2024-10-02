@@ -1,12 +1,10 @@
-# Your Name Here
+# Annalise Gade
 # UWYO COSC 1010
 # Submission Date
 # Lab 03 
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Lab Section: 15
+# Sources, people worked with, help given to: N/A
+# No additional comments
 
 
 
@@ -99,7 +97,22 @@ min_temps = [
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 
+# Initializing variables
+total_max = 0
+total_min = 0
+for temp in range(len(max_temps)):
+    total_max += max_temps[temp]
+    total_min += min_temps[temp]
+ave_max = total_max/(temp+1)    # need to add one to temp to get true number of data points (different from last index)
+ave_min = total_min/(temp+1)
+
+# Print variables to one decimal place
+print(f"The average high is {'%.1f' % ave_max}")
+print(f"The average low is {'%.1f' % ave_min}")
+
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
-
-
+high = max(max_temps)
+low = min(min_temps)
+print(f"The high temp is {high}")
+print(f"The low temp is {low}")
